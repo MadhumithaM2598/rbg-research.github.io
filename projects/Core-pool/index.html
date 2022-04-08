@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- Author: Pranav Rajpurkar 2017-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      CoRe-PooL
+    </title>
+    <meta
+      name="description"
+      content="Classifying Deforestation Drivers in Satellite Imagery."
+    />
+    <meta
+      property="og:image"
+      content="https://stanfordmlgroup.github.io/projects/forestnet/img/fig1.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://stanfordmlgroup.github.io/projects/forestnet/img/fig1.png"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="image_src" type="image/jpeg" href="/img/RBG logo/50x50.png" />
+    <link rel="shortcut icon" href="/img/RBG logo/50x50.png" type="image/x-icon" />
+    <link rel="icon" href="/img/RBG logo/50x50.png" type="image/x-icon" />
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,600"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="/lib/simple-line-icons/css/simple-line-icons.css"
+    />
+    <link href="/css copy/theme.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/projects/chexnext/css/chexnext.css"
+    />
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="/js/analytics.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display-->
+        <div class="navbar-header">
+          <a class="navbar-brand page-scroll" href="/">RBG AI Research</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling-->
+      </div>
+    </nav>
+    <section id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h1>
+              CoRePooL - Corpus for Resource-Poor Languages
+            </h1>
+            <p>
+              HB Barathi Ganesh, Jyothish Lal G, Soman K P, Jairam R & Kamal N S
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 style="text-align: justify;">
+              We have deployed a deep learning-based application Voice-specific Human-Machine Interaction 
+              for low resource languages 
+            </h2>
+            <p style="text-align: justify;">
+              CoRePooL stands for Corpus for
+              Resource-Poor Languages.It is a voice-specific Human-Machine Interaction application that is accelerated by deep learning algorithms.
+              The annotation of supervised
+              corpus helps in performing Speech-to-Text, Text-to-Speech, Translation, Gender, and Speaker Identification. 
+              Since these algorithms
+              are data-hungry models, only very few resource-rich languages such as English,
+              Ancient Greek, Latin, and Egyptian Language have a larger corpus to accommodate the deep learning algorithms. This is a big constraint for resource-poor languages in the speech domain where the data is limited.
+              Deploying deep learning-based applications for low resource languages often
+              suffers from data scarcity resulting in poor performance of the model. 
+              Here we aim to produce the corpus for resource-less Badaga language
+              by setting baseline for speech and text analysis  with the help
+              of deep learning based foundation models.
+
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+              <img
+              src="/projects/Core-pool/img/Deep learning methods.png"
+              style="max-height: 900px;"
+              width="500"
+            />
+          </div>
+          <div class="col-md-6">
+            <style>
+              ul li { margin-bottom: 25px; }
+          </style>
+            <h1>
+             The contributions of this paper 
+            </h1>
+            <ul style= "list-style-type:circle"  style="line-height:1.4;" style="text-align: justify;">
+              <li style="text-align: justify;">We collated 420 minutes of annotated and 968 minutes of unannotated
+                corpus for Badaga in CoRePooL corpus version 0.1.0.</li>
+              <li style="text-align: justify;"> We released 420 minutes of speech data for performing Speech-to-Text,
+                Text-to-Speech, Gender Identification and Speaker Identification.</li>
+              <li style="text-align: justify;">We released Badaga-English parallel text corpus with 2100 number of
+                sentences for translation.</li> 
+              <li style="text-align: justify;"> The foundation models are fine tuned to setup the baseline for all the
+                tasks.</li>
+            </ul>
+            <a style="text-align: center;"
+            class="btn btn-lg btn-default"
+            href="https://github.com/rbg-research/CoRePooL/tree/main/benchmarks/badaga"
+            >
+            Code and Pre-trained models
+          </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              Motivation
+            </h2>
+            <p style="text-align: justify;">
+                  when deep learning models replaced
+                  conventional methods the successive results were obtained with the strength
+                  of non-linearity learning capability through various algorithms like DNN, DAE, CNN, RNN and LSTM.
+                  Since these algorithms
+                  are data-hungry models, only very few resource-rich languages such as English,
+                  Ancient Greek, Latin, and Egyptian Language have a larger corpus to accommodate the deep learning algorithms. 
+                  This is a big constraint for resource-poor
+                  languages in the speech domain where the data is limited.
+                  Deploying deep learning-based applications for low resource languages often
+                  suffers from data scarcity resulting in poor performance of the model. Data
+                  scarcity occurs when there is not sufficient supervised and unsupervised data
+                  for the model to train. By observing these, we have developed the CoRePooL
+                  version 0.1.0 corpus, which includes 420 minutes of annotated and 968 minutes
+                  of un-annotated Baduga corpus for performing 4 speech analytics and 1 text
+                  analytics task. Badaga language is one of the low resource languages from the
+                  Dravidian language family, predominantly used by Badagas. It is closely related
+                  to Kannada, commonly spoken by the Badaga people of the Nilgiris district
+                  at the junction of Kerala, Karnataka, and Tamilnadu. There are almost 400
+                  villages in the Nilgiris district, where the people speak the Badaga language.
+                  According to the 2011 census, there are 134000 native Badaga speakers and
+                  according to “Times of India” there are around 2.5 lakhs of native speakers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="gray">
+          <div class="container">
+            <div class="row">
+              <div class = "col-md-12">
+                <h2>
+                  CoRe-PooL
+                </h2>
+                <p style="text-align: justify;">
+                  Since the Badaga language is not officially written on any native script,
+                  we have manually created 2100 number of Badaga transcript written in english
+                  slong with its corresponding translation in English. 12 native speaker spoke these
+                  text sets and recoded. Both annotated and unannotated corpus released as wave files
+                  with sampling rate of 22050 Hz and PCM 16 bit rate.
+
+                  The annotated corpus constructed carefully to include the word variations
+                  which includes, food items, utensils, proverbs, insects, flowers, animals, colours,
+                  numbers, days, weeks, months, fruits, common places, action words and vehicle
+                  types. The unannotated corpus has been collated by taking data from the Youtube. 
+                  The genre includes musical songs, short films and talk shows
+                </p>
+              </div>
+              <div class="col-md-12">
+                <h2></h2>
+                <table class="table performanceTable">
+                  <thead></thead>
+                  <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="3" style="text-align: center;">Number of transcript</th>
+                    <th colspan="3" style="text-align: center;">Duration(Seconds)</th>
+                    <th colspan="1" style="text-align: center;">Number of Unique Words</th>
+                    <th colspan="1" style="text-align: center;">Total Number of Words</th>
+                  </tr>
+                  <tr>
+                    <th style="text-align: center;">Male</th>
+                    <th style="text-align: center;">Female</th>
+                    <th style="text-align: center;">Total</th>
+                    <th style="text-align: center;">Male</th>
+                    <th style="text-align: center;">Female</th>
+                    <th style="text-align: center;">Total</th>
+                  </tr>
+                  <tbody></tbody>
+                  <tr>
+                    <td>Train</td>
+                    <td style="text-align: center;">3440</td>
+                    <td style="text-align: center;">3457</td>
+                    <td style="text-align: center;">6897</td>
+                    <td style="text-align: center;">8295.75</td>
+                    <td style="text-align: center;">8359.64</td>
+                    <td style="text-align: center;">16655.39</td>
+                    <td style="text-align: center;">1088</td>
+                    <td style="text-align: center;">35436</td>
+                  </tr>
+                  <tr>
+                    <td>Validation</td>
+                    <td style="text-align: center;">734</td>
+                    <td style="text-align: center;">736</td>
+                    <td style="text-align: center;">1470</td>
+                    <td style="text-align: center;">1759.63</td>
+                    <td style="text-align: center;">1766.69</td>
+                    <td style="text-align: center;">3526.32</td>
+                    <td style="text-align: center;">775</td>
+                    <td style="text-align: center;">7528</td>
+                  </tr>
+                  <tr>
+                    <td>Test</td>
+                    <td style="text-align: center;">734</td>
+                    <td style="text-align: center;">736</td>
+                    <td style="text-align: center;">1470</td>
+                    <td style="text-align: center;">1777.13</td>
+                    <td style="text-align: center;">1741.79</td>
+                    <td style="text-align: center;">3518.92</td>
+                    <td style="text-align: center;">789</td>
+                    <td style="text-align: center;">7541</td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td style="text-align: center;">4908</td>
+                    <td style="text-align: center;">4929</td>
+                    <td style="text-align: center;">9837</td>
+                    <td style="text-align: center;">11832.51</td>
+                    <td style="text-align: center;">11868.13</td>
+                    <td style="text-align: center;">23700.65</td>
+                    <td style="text-align: center;">2652</td>
+                    <td style="text-align: center;">50505</td>
+                  </tr>
+                  <p style="text-align: center;">
+                    Table 1. CoRe-PooL Statistics
+                  </p>
+                </table>
+              </div>
+              <div class="col-md-6 col-md-offset-3" >
+                <h2></h2>
+                <table  class="table performanceTable">
+
+                  <thead></thead>
+                  <tr>
+                    <th colspan="1" style="text-align: center;">Variation</th>
+                    <th colspan="1" style="text-align: center;">Total Audio Length(Minutes)</th>
+                  </tr>
+                  <tbody></tbody>
+                  <tr>
+                    <td style="text-align: center;">Annotated</td>
+                    <td style="text-align: center;">420</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">Unannotated</td>
+                    <td style="text-align: center;">968</td>
+                  </tr>
+                  
+                  <p style="text-align: center;">
+                    Table 2. Core-pool Variation
+                  </p>
+                </table>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </section>
+
+        <div class="row">
+          <div class="col-md-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-md-offset-1">
+            <img src="/projects/Core-pool/img/gender.png"/>
+            <h4 class="compact-title" style="text-align: center;">Gender Identification</h4>
+          </div>
+
+          <div class="col-md-2 item-wrap col-sm-4">
+            <img src="/projects/Core-pool/img/speech to text.png" />
+            <h4 class="compact-title" style="text-align: center;">Speech to Text</h4>
+          </div>
+
+          <div class="col-md-2 item-wrap col-sm-4">
+            <img src="/projects/Core-pool/img/text to speech.png" />
+            <h4 class="compact-title" >Text to Speech</h4>
+          </div>
+
+          <div class="col-md-2 item-wrap col-sm-4">
+            <img src="/projects/Core-pool/img/chat.png" />
+            <h4 class="compact-title" style="text-align: center;">Speaker Identification</h4>
+          </div>
+
+          <div class="col-md-2 item-wrap col-sm-4">
+            <img src="/projects/Core-pool/img/translator.png" />
+            <h4 class="compact-title" style="text-align: center;">Translator</h4>
+          </div>
+
+          <div class="col-md-12">
+            <h3>
+              To learn more check out
+              <a
+                href="https://github.com/rbg-research/CoRePooL"
+              >
+                our GitHub
+              </a>
+              and read
+              <a href="https://github.com/rbg-research/CoRePooL/tree/main/benchmarks/badaga">our Benchmark</a>
+              where you can find the fine tuned models applied for the different tasks and the observed results.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="/"><img align="left" src="/img/RBG logo/100x100.png" /></a>
+            <h3>
+              <span style="padding-left: 25px;">
+                If you have queries about our work, contact us at:
+              </span>
+            </h3>
+            <h4>
+              <a href="mailto: research@rbg.ai">
+                <span style="padding-left: 25px;">research@rbg.ai</span>
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/theme.js"></script>
+  </body>
+</html>

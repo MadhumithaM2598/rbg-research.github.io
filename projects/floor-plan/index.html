@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!-- Author: Pranav Rajpurkar 2017-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Floor-plan-Detection
+    </title>
+    <meta
+      name="description"
+      content="Classifying Deforestation Drivers in Satellite Imagery."
+    />
+    <meta
+      property="og:image"
+      content="https://stanfordmlgroup.github.io/projects/forestnet/img/fig1.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://stanfordmlgroup.github.io/projects/forestnet/img/fig1.png"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="image_src" type="image/jpeg" href="/img/RBG logo/50x50.png" />
+    <link rel="shortcut icon" href="/img/RBG logo/50x50.png" type="image/x-icon" />
+    <link rel="icon" href="/img/RBG logo/50x50.png" type="image/x-icon" />
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,600"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="/lib/simple-line-icons/css/simple-line-icons.css"
+    />
+    <link href="/css copy/theme.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/projects/chexnext/css/chexnext.css"
+    />
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="/js/analytics.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display-->
+        <div class="navbar-header">
+          <a class="navbar-brand page-scroll" href="/">RBG AI Research</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling-->
+      </div>
+    </nav>
+    <section id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h1 style="text-align: justify;">
+              Enhanced object detection in floor-plan through super-resolution
+            </h1>
+            <p style="text-align: justify;">
+              Dev Khare, NS Kamal, HB Barathi Ganesh, V Sowmya & VV Sajith Varriya
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 style="text-align: justify;">
+              We developed a deep learning model for Building Information Modelling (BIM) software using
+              scalable vector formats to enable flexible designing of floor plans in the industry. 
+            </h2>
+            <p style="text-align: justify;">
+              Floor plans in the architectural domain can come from many
+              sources that may or may not be in scalable vector format. 
+              The conversion of floor plan images to fully annotated vector images is a process that can now be realized by computer vision.
+              Novel datasets in this field have been used to train Convolutional Neural Network (CNN)
+              architectures for object detection. Image enhancement through SuperResolution (SR) is also an established CNN based network in computer
+              vision that is used for converting low resolution images to high resolution ones. 
+              This work focuses on creating a multi-component module that stacks a SR model on a floor plan object detection model.
+            </p>
+            <a
+              class="btn btn-lg btn-default"
+              href="https://arxiv.org/abs/2112.09844v1"
+            >
+              Read The Paper (Dev Khare et al.)
+            </a>
+          </div>
+          <div class="col-md-4">
+            <img
+              align = "middle"
+              src="/projects/floor-plan/img/Model.png"
+              width="800"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="/projects/floor-plan/img/Plan.jpg" />
+          </div>
+          <div class="col-md-12">
+            <h2 style="text-align: justify;">
+              Floor-Plan-Detection dataset
+            </h2>
+            <p style="text-align: justify;">
+              Segmentation of floor plans needs to be precise for an end-to-end application.
+              After observing the segmentation results of the empirical model for floor plans
+              of various sizes, we concluded that there is a need for the CubiCasa approach to
+              incorporate image enhancement as an essential preliminary step.
+              CubiCasa5K is a large-scale floorplan image dataset containing 5000 samples annotated into over 80 floorplan object categories. 
+              The dataset annotations are performed in a dense and versatile manner by using polygons for separating the different objects. 
+              Our floorplan module was tested on 100 images from the CubiCasa5k dataset that had sizes less that 800x800. 
+              This was done to test the influence of super-resolution on low resolution images. 
+            </p>
+            <a
+              class="btn btn-lg btn-default"
+              href="https://zenodo.org/record/2613548"
+            >
+              Download the Dataset
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 style="text-align: justify;">
+              Our Floor-Plan-Detection uses multi-component module that can perform image enhancement and object detection.
+            </h2>
+            <p style="text-align: justify;">
+              Since the floor plan detection is an end to end conversation, the process need not be real-time. The main objective
+              of the floor plan annotation task is to enhance the accuracy without constraints on time and computing power. To handle this,  a
+              novel multi-component module has been experimented  that can perform image enhancement followed by
+              the object detection. From the CubiCasa5k corpus we select ninety low resolution floor plans and observe the
+              increase in performance after super-resolution.
+            </p>
+            <p style="text-align: justify;">
+              This work performs super-resolution for image enhancement before detecting
+              floor plan icons and room types; stacking super-resolution frameworks with the
+              CubiCasa architecture results in a multi-component module that does just this.
+              The networks chosen for super-resolution here are EDSR, ESPCN, FSRCNN,
+              and LapSRN.  For the inference, we need a quantifiable measure
+              that could help us make a conclusive statement on improving performance by
+              using super-resolution. For this, the accuracy scores have to
+              be based on ground truth scaled by the same factor chosen for super-resolution;
+              the CubiCasa5k corpus provides ground truth in scalable vector graphics (SVG)
+              format making this possible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="gray">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>
+                  Results
+                </h2>
+                <p style="text-align: justify;">
+                  The multi-component module performed room detection with higher accuracy
+                  than that of when using CubiCasa5k model alone. The best
+                  improvement in accuracy for the dataset chosen is 39.47%; EDSR is the SR
+                  model used in this case.  EDSR also showed the best result from all the superresolution methods with a 12.17% improvement on average.
+                  This stacked Super-Resolution method has to be used during training to alter the
+                  dimensions of low resolution images. This could enhance the overall performance
+                  of the network and push it to a wider range of use cases.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <h2></h2>
+                <table class="table performanceTable">
+                  <thead></thead>
+                  <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="5" style="text-align: center;">F1-Score</th>
+                  </tr>
+                  <tr>
+                    <th style="text-align: center;">ESPCN</th>
+                    <th style="text-align: center;">EDSR</th>
+                    <th style="text-align: center;">FSRCNN</th>
+                    <th style="text-align: center;">LapSRN</th>
+                    <th style="text-align: center;">Original</th>
+                  </tr>
+                  <tbody></tbody>
+                  <tr>
+                    <td>Background</td>
+                    <td style="text-align: center;">0.636</td>
+                    <td style="text-align: center;">0.637</td>
+                    <td style="text-align: center;">0.635</td>
+                    <td style="text-align: center;">0.636</td>
+                    <td style="text-align: center;">0.521</td>
+                  </tr>
+                  <tr>
+                    <td>Outdoor</td>
+                    <td style="text-align: center;">0.459</td>
+                    <td style="text-align: center;">0.458</td>
+                    <td style="text-align: center;">0.469</td>
+                    <td style="text-align: center;">0.469</td>
+                    <td style="text-align: center;">0.227</td>
+                  </tr>
+                  <tr>
+                    <td>Wall</td>
+                    <td style="text-align: center;">0.170</td>
+                    <td style="text-align: center;">0.169</td>
+                    <td style="text-align: center;">0.168</td>
+                    <td style="text-align: center;">0.170</td>
+                    <td style="text-align: center;">0.088</td>
+                  </tr>
+                  <tr>
+                    <td>Kitchen</td>
+                    <td style="text-align: center;">0.304</td>
+                    <td style="text-align: center;">0.304</td>
+                    <td style="text-align: center;">0.304</td>
+                    <td style="text-align: center;">0.309</td>
+                    <td style="text-align: center;">0.142</td>
+                  </tr>
+                  <tr>
+                    <td>Living room</td>
+                    <td style="text-align: center;">0.459</td>
+                    <td style="text-align: center;">0.450</td>
+                    <td style="text-align: center;">0.448</td>
+                    <td style="text-align: center;">0.448</td>
+                    <td style="text-align: center;">0.185</td>
+                  </tr>
+                  <tr>
+                    <td>Bedroom</td>
+                    <th style="text-align: center;">0.449</th>
+                    <th style="text-align: center;">0.437</th>
+                    <th style="text-align: center;">0.448</th>
+                    <th style="text-align: center;">0.435</th>
+                    <td style="text-align: center;">0.238</td>
+                  </tr>
+                  <tr>
+                    <td>Bath</td>
+                    <th style="text-align: center;">0.199</th>
+                    <th style="text-align: center;">0.198</th>
+                    <th style="text-align: center;">0.210</th>
+                    <th style="text-align: center;">0.199</th>
+                    <td style="text-align: center;">0.148</td>
+                  </tr>
+                  <tr>
+                    <td>Entry</td>
+                    <th style="text-align: center;">0.253</th>
+                    <th style="text-align: center;">0.251</th>
+                    <th style="text-align: center;">0.251</th>
+                    <th style="text-align: center;">0.255</th>
+                    <td style="text-align: center;">0.207</td>
+                  </tr>
+                  <tr>
+                    <td>Railing</td>
+                    <th style="text-align: center;">0.331</th>
+                    <th style="text-align: center;">0.330</th>
+                    <th style="text-align: center;">0.332</th>
+                    <th style="text-align: center;">0.331</th>
+                    <td style="text-align: center;">0.353</td>
+                  </tr>
+                  <tr>
+                    <td>Storage</td>
+                    <th style="text-align: center;">0.438</th>
+                    <th style="text-align: center;">0.438</th>
+                    <th style="text-align: center;">0.437</th>
+                    <th style="text-align: center;">0.438</th>
+                    <td style="text-align: center;">0.455</td>
+                  </tr>
+                  <tr>
+                    <td>Garage</td>
+                    <th style="text-align: center;">0.904</th>
+                    <th style="text-align: center;">0.904</th>
+                    <th style="text-align: center;">0.905</th>
+                    <th style="text-align: center;">0.905</th>
+                    <td style="text-align: center;">0.910</td>
+                  </tr>
+                  <tr>
+                    <td>Undefined</td>
+                    <th style="text-align: center;">0.207</th>
+                    <th style="text-align: center;">0.210</th>
+                    <th style="text-align: center;">0.208</th>
+                    <th style="text-align: center;">0.208</th>
+                    <td style="text-align: center;">0.159</td>
+                  </tr>
+                  <tr>
+                    <td>micro avg</td>
+                    <th style="text-align: center;">0.460</th>
+                    <th style="text-align: center;">0.461</th>
+                    <th style="text-align: center;">0.459</th>
+                    <th style="text-align: center;">0.460</th>
+                    <td style="text-align: center;">0.305</td>
+                  </tr>
+                  <p style="text-align: center;">
+                    Table 1. Room detection comparison of SR method with
+                    original.
+                  </p>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <h2></h2>
+                <table class="table performanceTable">
+                  <thead></thead>
+                  <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="5" style="text-align: center;">F1-Score</th>
+                  </tr>
+                  <tr>
+                    <th style="text-align: center;">ESPCN</th>
+                    <th style="text-align: center;">EDSR</th>
+                    <th style="text-align: center;">FSRCNN</th>
+                    <th style="text-align: center;">LapSRN</th>
+                    <th style="text-align: center;">Original</th>
+                  </tr>
+                  <tbody></tbody>
+                  <tr>
+                    <td>No Icon</td>
+                    <td style="text-align: center;">0.935</td>
+                    <td style="text-align: center;">0.935</td>
+                    <td style="text-align: center;">0.935</td>
+                    <td style="text-align: center;">0.935</td>
+                    <td style="text-align: center;">0.941</td>
+                  </tr>
+                  <tr>
+                    <td>Window</td>
+                    <td style="text-align: center;">0.109</td>
+                    <td style="text-align: center;">0.097</td>
+                    <td style="text-align: center;">0.099</td>
+                    <td style="text-align: center;">0.106</td>
+                    <td style="text-align: center;">0.025</td>
+                  </tr>
+                  <tr>
+                    <td>Door</td>
+                    <td style="text-align: center;">0.036</td>
+                    <td style="text-align: center;">0.037</td>
+                    <td style="text-align: center;">0.036</td>
+                    <td style="text-align: center;">0.038</td>
+                    <td style="text-align: center;">0.015</td>
+                  </tr>
+                  <tr>
+                    <td>Closet</td>
+                    <td style="text-align: center;">0.159</td>
+                    <td style="text-align: center;">0.159</td>
+                    <td style="text-align: center;">0.159</td>
+                    <td style="text-align: center;">0.157</td>
+                    <td style="text-align: center;">0.094</td>
+                  </tr>
+                  <tr>
+                    <td>Electical Applience</td>
+                    <td style="text-align: center;">0.119</td>
+                    <td style="text-align: center;">0.122</td>
+                    <td style="text-align: center;">0.120</td>
+                    <td style="text-align: center;">0.122</td>
+                    <td style="text-align: center;">0.070</td>
+                  </tr>
+                  <tr>
+                    <td>Toilet</td>
+                    <th style="text-align: center;">0.117</th>
+                    <th style="text-align: center;">0.106</th>
+                    <th style="text-align: center;">0.099</th>
+                    <th style="text-align: center;">0.117</th>
+                    <td style="text-align: center;">0.159</td>
+                  </tr>
+                  <tr>
+                    <td>Sink</td>
+                    <th style="text-align: center;">0.081</th>
+                    <th style="text-align: center;">0.079</th>
+                    <th style="text-align: center;">0.081</th>
+                    <th style="text-align: center;">0.081</th>
+                    <td style="text-align: center;">0.159</td>
+                  </tr>
+                  <tr>
+                    <td>Sauna Bench</td>
+                    <th style="text-align: center;">0.465</th>
+                    <th style="text-align: center;">0.464</th>
+                    <th style="text-align: center;">0.463</th>
+                    <th style="text-align: center;">0.462</th>
+                    <td style="text-align: center;">0.452</td>
+                  </tr>
+                  <tr>
+                    <td>Fire Place</td>
+                    <th style="text-align: center;">0.843</th>
+                    <th style="text-align: center;">0.843</th>
+                    <th style="text-align: center;">0.844</th>
+                    <th style="text-align: center;">0.844</th>
+                    <td style="text-align: center;">0.909</td>
+                  </tr>
+                  <tr>
+                    <td>Bathtub</td>
+                    <th style="text-align: center;">0.910</th>
+                    <th style="text-align: center;">0.910</th>
+                    <th style="text-align: center;">0.910</th>
+                    <th style="text-align: center;">0.910</th>
+                    <td style="text-align: center;">0.989</td>
+                  </tr>
+                  <tr>
+                    <td>Chimney</td>
+                    <th style="text-align: center;">0.978</th>
+                    <th style="text-align: center;">0.978</th>
+                    <th style="text-align: center;">0.978</th>
+                    <th style="text-align: center;">0.978</th>
+                    <td style="text-align: center;">1.000</td>
+                  </tr>
+                  <tr>
+                    <td>micro avg</td>
+                    <th style="text-align: center;">0.875</th>
+                    <th style="text-align: center;">0.875</th>
+                    <th style="text-align: center;">0.875</th>
+                    <th style="text-align: center;">0.874</th>
+                    <td style="text-align: center;">0.886</td>
+                  </tr>
+                  <p style="text-align: center;">
+                    Table 2. Icon detection comparison of SR mothods with
+                    original.
+                  </p>
+                </table>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </section>
+
+        <div class="row">
+          <div class="col-md-6"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+          <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/ZGwFl6K_EyU"
+           title="YouTube video player" frameborder="0" allow="accelerometer;
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+          </div>
+          <div class="col-md-6">
+            <style>
+              .example {
+                height: 300px;
+                padding: 0 10px;
+                white-space: normal;
+                word-break: break-word;
+                display: flex;
+                align-items: center;
+              }
+            </style>
+            <span class="example">
+            <h3 style="text-align: justify;">
+              To learn more check out 
+              <a href="https://github.com/rbg-research/Floor-Plan-Detection">our GitHub</a>
+              and read
+              <a href="https://arxiv.org/abs/2112.09844v1">our publication</a>
+              presented at 3rd International Conference on Machine Learning, Image Processing, Network Security and Data Sciences
+            </h3>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="/"><img align="left" src="/img/RBG logo/100x100.png" /></a>
+            <h3>
+              <span style="padding-left: 25px;">
+                If you have queries about our work, contact us at:
+              </span>
+            </h3>
+            <h4>
+              <a href="mailto: research@rbg.ai">
+                <span style="padding-left: 25px;">research@rbg.ai</span>
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/theme.js"></script>
+  </body>
+</html>
